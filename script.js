@@ -3,7 +3,7 @@ const recipeCards = document.querySelectorAll('.recipe-card');
 const toggleBtn = document.getElementById('toggle-mode');
 const favButtons = document.querySelectorAll('.fav-btn');
 
-// Search Functionality
+
 searchInput.addEventListener('input', () => {
   const keyword = searchInput.value.toLowerCase();
   recipeCards.forEach(card => {
@@ -13,20 +13,19 @@ searchInput.addEventListener('input', () => {
   });
 });
 
-// Dark/Light Mode Toggle
+
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
 });
 
-// Favorite Button Toggle
+
 favButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     btn.classList.toggle('favorited');
   });
 });
 
-// Read more button
 
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".read-more-btn");
